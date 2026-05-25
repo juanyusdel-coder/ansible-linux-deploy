@@ -23,5 +23,5 @@
 
     - name: Create a simple landing page
       copy:
-        content: "<h1>Deployed via Terraform & Ansible on AWS</h1>"
+        content: "<h1>Deployed via Terraform & Ansible on AWS. Hello World!!</h1>"
         dest: /usr/share/nginx/html/index.html
