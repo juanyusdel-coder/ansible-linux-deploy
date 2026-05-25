@@ -8,6 +8,6 @@ AWS_ACCESS_KEY_ID: Your IAM user key.
 AWS_SECRET_ACCESS_KEY: Your IAM secret key.
 AWS_SSH_KEY: The contents of your deployer.pem file.
 Push to GitHub: Once you push these files, GitHub Actions will:
-Create the EC2 instance.[3][4][5][6][7]
-Wait for it to be ready.[5][7]
+Create the EC2 instance.
+Wait for it to be ready.
 Connect via SSH and install Nginx using Ansible
