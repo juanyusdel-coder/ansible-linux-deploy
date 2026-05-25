@@ -1,0 +1,27 @@
+---
+- name: Configure Linux Server
+  hosts: all
+  become: true
+  tasks:
+    - name: Update all packages (AL2023 uses dnf)
+      dnf:
+        name: "*"
+        state: latest
+
+    - name: Install Nginx and Git
+      dnf:
+        name: 
+          - nginx
+          - git
+        state: present
+
+    - name: Start and enable Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: true
+
+    - name: Create a simple landing page
+      copy:
+        content: "<h1>Deployed via Terraform & Ansible on AWS</h1>"
+        dest: /usr/share/nginx/html/index.html
